@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF</title>
+    <style>
+        #load{
+            padding: 10px;
+            width: fit-content;
+            margin: 5rem auto;
+            background: rgb(178, 235, 178);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image to PDF</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="() => {console.log('submitted')} ">
+        <input type="file" name="avatar" id="">
+        <button type="submit" id="submit">Convert</button>
+    </form>
+    <div id="load">
+        Loading... Please wait...
+    </div>
+    <script>
+        let load = document.getElementById('load');
+        let submitBtn = document.getElementById('submit');
+        submitBtn.addEventListener('click', () =>{
+            load.style.display = 'block'
+        })
+        
+    </script>
+</body>
+
+</html>
